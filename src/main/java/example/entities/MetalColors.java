@@ -7,6 +7,7 @@ import com.epam.jdi.uitests.web.selenium.elements.complex.Dropdown;
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
 import org.openqa.selenium.support.FindBy;
 
+// TODO This class should be Data class (like a User.class) instead of PageObject class !
 public class MetalColors extends WebPage {
 
     @FindBy(css = "label[for='p2']")

@@ -31,9 +31,9 @@ public class JDIExampleSite extends WebSite {
         loginForm.loginAs(new User());
     }
 
+    // TODO this method should be parametrised with DormData class
     @Step
     public static void fillForm() {
-
         metalColors.button3.click();
         metalColors.button8.click();
         metalColors.water.click();
@@ -49,6 +49,7 @@ public class JDIExampleSite extends WebSite {
         metalColors.submit.click();
     }
 
+    // TODO exactly the same like fillForm
     @Step
     public static void checkFillFormOnAccordance() {
         metalColors.sumRes.shouldHave(Condition.exactText("Summary: 11"));
