@@ -1,4 +1,4 @@
-package example.entities;
+package example.parser;
 
 import com.epam.commons.DataClass;
 import org.apache.commons.io.FileUtils;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class DataSet extends DataClass<DataSet> {
+public class ParsingDataSet extends DataClass<ParsingDataSet> {
 
     public static List<Integer> summaryNumber = new ArrayList<>();
     public static List<String> stringOfElements = new ArrayList<>();

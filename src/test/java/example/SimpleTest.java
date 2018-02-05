@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import static example.entities.DataSet.*;
+import static example.parser.ParsingDataSet.*;
 
 public class SimpleTest extends TestNGBase {
 

@@ -2,10 +2,11 @@ package example.site.sections;
 
 import com.epam.jdi.uitests.web.selenium.elements.common.CheckBox;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
+import com.epam.jdi.uitests.web.selenium.elements.composite.Section;
 import example.entities.SaladDropDown;
 import org.openqa.selenium.support.FindBy;
 
-public class SaladDropDownForm extends Form<SaladDropDown> {
+public class SaladDropDownForm extends SaladDropDown {
 
     @FindBy(css = "label[for='g5']")
     public CheckBox cucumber;

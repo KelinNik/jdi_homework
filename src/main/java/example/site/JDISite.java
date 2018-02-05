@@ -8,10 +8,11 @@ import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JSite;
 import example.entities.*;
+import example.parser.ParsingDataSet;
 import example.site.pages.HomePage;
 import example.site.pages.MetalsAndColorsPage;
 import example.site.sections.LoginForm;
-import example.site.sections.MetalsColorsForm;
+import example.site.sections.MetalsColorsFormResults;
 import example.site.sections.SaladDropDownForm;
 import example.site.sections.SummaryForm;
 import org.openqa.selenium.support.FindBy;
@@ -48,8 +49,8 @@ public class JDISite extends WebSite {
 
     public static SummaryForm summaryForm;
     public static Elements elements;
-    public static MetalsColorsForm metalColorsForm;
-    public static DataSet data = new DataSet();
+    public static MetalsColorsFormResults metalColorsForm;
+    public static ParsingDataSet data = new ParsingDataSet();
     public static ColorsDropDown colorsDropDown;
     public static MetalsDropDown metalDropDown;
     public static SaladDropDownForm saladDropDown;

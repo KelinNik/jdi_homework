@@ -1,5 +1,7 @@
 package example.site.pages;
 
-public class HomePage extends CommonPage {
+import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
+
+public class HomePage extends WebPage {
 
 }

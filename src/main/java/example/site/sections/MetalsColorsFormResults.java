@@ -1,14 +1,10 @@
 package example.site.sections;
 
-import com.epam.jdi.uitests.web.selenium.elements.common.Button;
-import com.epam.jdi.uitests.web.selenium.elements.common.CheckBox;
 import com.epam.jdi.uitests.web.selenium.elements.common.Text;
-import com.epam.jdi.uitests.web.selenium.elements.complex.Dropdown;
-import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
-import example.entities.MetalColors;
+import example.entities.MetalColorsResults;
 import org.openqa.selenium.support.FindBy;
 
-public class MetalsColorsForm extends Form<MetalColors> {
+public class MetalsColorsFormResults extends MetalColorsResults {
 
     @FindBy(css = ".summ-res")
     public Text sumRes;

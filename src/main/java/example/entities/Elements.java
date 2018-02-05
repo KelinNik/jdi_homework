@@ -6,6 +6,7 @@ import com.epam.jdi.uitests.web.selenium.elements.composite.Section;
 import org.openqa.selenium.support.FindBy;
 
 public class Elements extends Section {
+
     @FindBy(css = "label[for='g1']")
     public CheckBox water;
     @FindBy(css = "label[for='g2']")

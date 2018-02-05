@@ -1,6 +1,7 @@
 package example.site.pages;
 
-public class MetalsAndColorsPage extends CommonPage {
+import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
 
+public class MetalsAndColorsPage extends WebPage {
 
 }
