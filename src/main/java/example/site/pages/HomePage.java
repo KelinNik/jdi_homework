@@ -1,8 +1,5 @@
 package example.site.pages;
 
-import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
-import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
+public class HomePage extends CommonPage {
 
-@JPage(url = "/index.html", title = "Home Page")
-public class HomePage extends WebPage {
 }

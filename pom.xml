@@ -23,6 +23,13 @@
             <version>LATEST</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20171018</version>
+        </dependency>
+
         <!--Allure-->
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
