@@ -1,39 +1,29 @@
 package example;
 
-import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
-import com.epam.jdi.uitests.web.testng.testRunner.TestNGBase;
-import example.site.JDISite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+
 import org.testng.annotations.Test;
 
-import static example.parser.ParsingDataSet.*;
+import java.io.IOException;
 
-public class SimpleTest extends TestNGBase {
+import static example.JDISite.*;
+import static example.enums.HeaderMenuEnum.METALS_COLORS;
 
-    @BeforeSuite(alwaysRun = true)
-    public static void setUp() {
-        WebSite.init(JDISite.class);
-    }
 
-    @BeforeMethod
-    public void beforeMethod() {
-        JDISite.homePage.open();
-        JDISite.login();
-    }
+public class SimpleTest extends InitTests {
 
     @Test
-    public void FillingMetalsAndColorsForm() {
-        JDISite.homePage.checkOpened();
-        JDISite.metalAndColorsPage.open();
-        JDISite.metalAndColorsPage.checkOpened();
-        JDISite.parseJsonFile();
-        JDISite.selectButton(summaryNumber);
-        JDISite.pickElements(stringOfElements);
-        JDISite.chooseTheColor(dataOfColors);
-        JDISite.chooseTheMetal(dataOfMetals);
-        JDISite.chooseSalad(stringOfVegetables);
-        JDISite.submit();
-        JDISite.checkFillFormOnAccordance();
+    public void metalColorSelectionTest() throws IOException {
+
+        //1 Login on JDI site as User
+        homePage.open();
+        login();
+        homePage.checkOpened();
+
+        //2 Open Metals & Colors page by Header menu
+        openMetalsColorsPage(METALS_COLORS);
+
+        //3 Fill form Metals & Colors
+        fillMetalsColorsForm();
+
     }
 }

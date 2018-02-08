@@ -1,10 +1,10 @@
-package example.site.sections;
+package example.entities;
 
 import com.epam.jdi.uitests.web.selenium.elements.common.Text;
-import example.entities.MetalColorsResults;
+
 import org.openqa.selenium.support.FindBy;
 
-public class MetalsColorsFormResults extends MetalColorsResults {
+public class MetalsColorsFormResults{
 
     @FindBy(css = ".summ-res")
     public Text sumRes;
