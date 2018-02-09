@@ -14,6 +14,7 @@ import example.pageObjects.sections.LoginForm;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.allure.annotations.Step;
 
+import java.io.File;
 import java.io.IOException;
 
 import static example.entities.ParsingDataSet.parseJson;
@@ -47,8 +48,8 @@ public class JDISite extends WebSite {
 
     @Step
     public static MetalColorsDataSet parseData() throws IOException {
-        MetalColorsDataSet metalColorsDataSet = parseJson();
-        return metalColorsDataSet;
+        File file = new File("ex8_jdi_metalsColorsDataSet.json");
+        return parseJson(file);
     }
 
     @Step

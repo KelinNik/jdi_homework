@@ -37,11 +37,11 @@ public class MetalsColorsForm extends Form<MetalColorsDataSet> {
     @JFindBy(css = ".metals input")
     public TextField metals;
 
-    @JComboBox(
+    @JDropdown(
             jroot = @JFindBy(css = ".dropdown salad"),
             jexpand = @JFindBy(type = "button"),
             jlist = @JFindBy(tagName = "li"))
-    public ComboBox salad;
+    public Dropdown salad;
 
 //    @FindBy(css = "#salad-dropdown button")
 //    public Button saladButton;

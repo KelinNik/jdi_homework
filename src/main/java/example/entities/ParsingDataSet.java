@@ -21,9 +21,8 @@ public class ParsingDataSet extends DataClass {
     public static List<String> stringOfVegetables = new ArrayList<>();
     //public static List<String> results = new ArrayList<>();
 
-    public static MetalColorsDataSet parseJson() throws IOException {
+    public static MetalColorsDataSet parseJson(File file) throws IOException {
 
-        File file = new File("ex8_jdi_metalsColorsDataSet.json");
         String content = FileUtils.readFileToString(file, "utf-8");
 
         JSONObject jsonObject = new JSONObject(content);

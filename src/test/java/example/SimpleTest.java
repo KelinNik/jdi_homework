@@ -24,6 +24,5 @@ public class SimpleTest extends InitTests {
 
         //3 Fill form Metals & Colors
         fillMetalsColorsForm();
-
     }
 }
