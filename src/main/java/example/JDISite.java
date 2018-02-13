@@ -12,6 +12,7 @@ import example.pageObjects.pages.MetalsAndColorsPage;
 import example.pageObjects.sections.HeaderMenu;
 import example.pageObjects.sections.LoginForm;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.DataProvider;
 import ru.yandex.qatools.allure.annotations.Step;
 
 import java.io.File;
