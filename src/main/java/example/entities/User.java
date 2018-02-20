@@ -1,16 +1,16 @@
 package example.entities;
 
-import com.epam.commons.DataClass;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-public class User extends DataClass {
+@Getter
+@AllArgsConstructor
+public class User {
 
-    public String name = "epam";
-    public String password = "1234";
+    private String login;
+    private String password;
+    private String name;
 
-//    public static User PETER = new User("epam", "1234");
-//
-//    public User(String name, String password) {
-//        this.name = name;
-//        this.password = password;
-//    }
+    public static final User PITER_CHAILOVSKII = new User("epam", "1234", "Piter Chailovskii");
+
 }

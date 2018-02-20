@@ -1,14 +1,11 @@
 package example.pageObjects.pages;
 
-import com.epam.jdi.uitests.web.selenium.elements.composite.WebPage;
-import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
-import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
-import example.pageObjects.sections.MetalsColorsForm;
+import example.pageObjects.forms.MetalsColorsForm;
+import example.pageObjects.sections.MetalsColorsResultSection;
 
-@JPage(url = "/metals-colors.html")
-public class MetalsAndColorsPage extends WebPage {
+public class MetalsAndColorsPage extends CommonPage {
 
-    @JFindBy(css = ".form")
     public MetalsColorsForm metalsColorsForm;
+    public MetalsColorsResultSection metalsColorsResultSection;
 
 }

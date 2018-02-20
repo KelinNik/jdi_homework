@@ -1,32 +1,32 @@
 package example.entities;
 
-import com.epam.commons.DataClass;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-import java.util.List;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
-public class MetalColorsDataSet extends DataClass {
+import static example.enums.MetalsColorsKeysEnum.*;
 
-    public Integer odd;
-    public Integer even;
-    public List<String> elements;
-    public String colors;
-    public String metals;
-    public List<String> salad;
+@Getter
+@AllArgsConstructor
+public class MetalColorsDataSet {
 
-    public MetalColorsDataSet(Integer odd, Integer even, List<String> elements, String colors, String metals, List<String> salad) {
-        this.odd = odd;
-        this.even = even;
-        this.elements = elements;
-        this.colors = colors;
-        this.metals = metals;
-        this.salad = salad;
-    }
-    @Override
-    public String toString() {
-        return "Summary: " + odd +" "+ even+ "\n" +
-                "Elements: " + elements + "\n" +
-                "Color: " + colors + "\n" +
-                "Metal: " + metals + "\n" +
-                "Vegetables: " + salad;
+    private Integer[] summary;
+    private String[] elements;
+    private String color;
+    private String metals;
+    private String[] vegetables;
+
+    public Map<String, String> getResultLog() {
+        Map<String, String> result = new HashMap<>();
+        result.put(SUMMARY.text, Integer.toString(summary[0] + summary[1]));
+        result.put(ELEMENTS.text, Arrays.stream(elements).collect(Collectors.joining(", ")));
+        result.put(COLOR.text, color);
+        result.put(METAL.text, metals);
+        result.put(VEGETABLES.text, Arrays.stream(vegetables).collect(Collectors.joining(", ")));
+        return result;
     }
 }

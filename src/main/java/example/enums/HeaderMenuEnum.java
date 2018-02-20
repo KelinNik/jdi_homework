@@ -1,14 +1,28 @@
 package example.enums;
 
+import lombok.NoArgsConstructor;
+
+import java.util.Objects;
+
+@NoArgsConstructor
 public enum HeaderMenuEnum {
-    HOME("Home"),
-    CONTACT_FORM("Contact form"),
-    SERVICE("Service"),
+    HOME,
+    CONTACT_FORM,
+    SERVICE,
     METALS_COLORS("Metals & Colors");
 
-    public String item;
+    private String text;
 
-    HeaderMenuEnum(String item){
-        this.item = item;
+    HeaderMenuEnum(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        if (Objects.isNull(text)) {
+            return name().replaceAll("_", " ");
+        } else {
+            return text;
+        }
     }
 }
